@@ -116,42 +116,19 @@ public class MainActivity extends AppCompatActivity {
     private void EqualsClicked(View v) {
         isTypingNumber = false;
         secondNum = Integer.parseInt(tvResult.getText().toString());
-        String result = null;
+        String result =null;
         if (operatorString.equals("+")) {
             result = String.valueOf(firstNum + secondNum);
         }else if (operatorString.equals("-")) {
             result = String.valueOf(firstNum - secondNum);
         }else  if (operatorString.equals("×")) {
             result = String.valueOf(firstNum * secondNum);
-        }else if (operatorString.equals("÷")) {
-            if (secondNum == 0) {
-                return;
-            } else {
-                result = String.valueOf(firstNum / secondNum);
-            }
+        }else if (operatorString.equals("÷")) {if (secondNum==0){return;} else {result = String.valueOf(firstNum / secondNum);
         }
-        tvResult.setText(result);
-
-
-    private void EqualsClicked(View v) {
-        isTypingNumber = false;
-        secondNum = Integer.parseInt(tvResult.getText().toString());
-        String result = null;
-        if (operatorString.equals("+")) {
-            result = String.valueOf(firstNum + secondNum);
-        }else if (operatorString.equals("-")) {
-            result = String.valueOf(firstNum - secondNum);
-        }else  if (operatorString.equals("×")) {
-            result = String.valueOf(firstNum * secondNum);
-        }else if (operatorString.equals("÷")) {
-            if (secondNum==0){
-                return;
-            } else {
-                result = String.valueOf(firstNum / secondNum);
-            }
         }
         tvResult.setText(result);
     }
+
     private void OperatorClicked(View v) {
         isTypingNumber = false;
         firstNum = Integer.parseInt(tvResult.getText().toString());
